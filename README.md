@@ -12,37 +12,13 @@ Key features:
 - Extensive visualization support — distributions, correlations, scatter plots, boxplots, pairplots, and ranking charts.
 - Modular, extensible design for adapting to new data sources or risk factors.
 
-
-
-## Project Structure
-
-project-root/
-├── data/
-│ └── raw/
-│ ├── Wallet_id.csv # CSV list of wallet addresses to analyze
-│ └── user-wallet-transactions.json # Optional local backup of transaction data
-├── outputs/
-│ ├── wallet_risk_scores.csv # Combined features and risk scores output
-│ ├── risk_distribution.png # Risk score distribution histogram
-│ ├── feature_correlation_heatmap.png # Feature correlation heatmap
-│ ├── scatter_risk_liquidation_borrow.png # Risk vs liquidation and borrow scatter plots
-│ ├── boxplot_liquidation_by_risk_category.png # Liquidation boxplots per risk bucket
-│ ├── pairplot_features_by_risk_category.png # Multivariate pairplot visualization
-│ └── top_10_high_risk_wallets_bar.png # Bar chart of top risky wallets
-├── src/
-│ ├── data_fetcher.py # Utilities to load wallet IDs and transactions
-│ ├── feature_engineering.py # Feature extraction logic from transaction data
-│ ├── normalization.py # Normalizes features, computes risk scores
-│ ├── api_fetcher.py # Covalent API integration code for transaction fetch
-│ └── ... # Other utility modules and helpers
-├── main.py # Main pipeline script integrating API fetch & scoring
-├── risk_scoring_analysis.ipynb # Notebook for exploratory data analysis & plots
-├── README.md # Project documentation (this file)
-└── requirements.txt # Python dependencies and package versions
+-To Start the Project
 
 python main.py
 
 This will fetch transactions automatically from Covalent for each wallet, extract risk features, compute risk scores, and save results in `outputs/wallet_risk_scores.csv`.
+
+-Run all - To run the cells in jupyter notebook
 
 jupyter notebook risk_scoring_analysis.ipynb
 
@@ -77,7 +53,7 @@ These features serve as inputs to the normalization and weighted scoring model p
 
 All plot images are saved in `outputs/` folder in PNG format, ready for reporting or presentations.
 
----
+
 
   Best Practices & Notes
 
